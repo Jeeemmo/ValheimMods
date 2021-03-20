@@ -1,0 +1,204 @@
+//UpgradeTable PrefabConfig 
+
+public class UpgradeTable : PrefabConfig
+{
+	public UpgradeTable() : base("UpgradeTable", "Forge")
+	{
+	}
+	public override void Register()
+	{
+		{
+		CraftingStation craftingStation = prefab.GetComponent<CraftingStation>();
+		craftingStation.m_name = "UpgradeTable";
+		}
+		{Piece piece = GetPiece(new PieceConfig()
+			Name = "Upgrade Table"
+			
+			Description = "Upgrade your armor here"
+			
+			Requirements = new PieceRequirementConfig[]
+			{
+				new PieceRequirementConfig()
+				{
+				
+					Item = "FineWood",
+					
+					Amount = 20
+				}
+				{
+				
+					Item = "Bronze",
+					
+					Amount = 5
+				}
+				{
+				
+					Item = "SurtlingCore",
+					
+					Amount = 2
+				}
+				{
+				
+					Item = "TrollHide",
+					
+					Amount = 5
+				}	
+			
+			}
+		}	
+
+	}	
+	
+//UpgradeTable Extensions PrefabConfig
+
+	//Extension 1
+	
+	public class UpgradeTableExt1 : PrefabConfig
+	{
+		public UpgradeTable() : base("UpgradeTable", "ForgeExt5")
+		{
+		}
+		public override void Register()
+		{
+			{
+			StationExtension stationExtension = prefab.GetComponent<StationExtension>();
+			StationExtension.m_craftingStation = "UpgradeTable"
+			}
+			{Piece piece = GetPiece(new PieceConfig()
+				Name = "Quenching Bucket"
+				
+				Description = "Upgrade Table Extension 1"
+				
+				Requirements = new PieceRequirementConfig[]
+				{
+					new PieceRequirementConfig()
+					{
+					
+						Item = "FineWood",
+						
+						Amount = 5
+					}
+					{
+					
+						Item = "Iron",
+						
+						Amount = 2
+					}
+					{
+					
+						Item = "TrollHide",
+						
+						Amount = 2
+					}
+					{
+					
+						Item = "Guck",
+						
+						Amount = 5
+					}	
+				
+				}
+			}	
+		}	
+		
+
+	//Extension 2
+		
+	public class UpgradeTableExt2 : PrefabConfig
+	{
+		public UpgradeTable() : base("UpgradeTable", "piece_workbench_ext4")
+		{
+		}
+		public override void Register()
+		{
+			{
+			StationExtension stationExtension = prefab.GetComponent<StationExtension>();
+			StationExtension.m_craftingStation = "UpgradeTable"
+			}
+			{Piece piece = GetPiece(new PieceConfig()
+				Name = "Tool Cabinet"
+				
+				Description = "UpgradeTable Extension 2"
+				
+				Requirements = new PieceRequirementConfig[]
+				{
+					new PieceRequirementConfig()
+					{
+					
+						Item = "FineWood",
+						
+						Amount = 5
+					}
+					{
+					
+						Item = "Silver",
+						
+						Amount = 4
+					}
+					{
+					
+						Item = "Wolf Pelt",
+						
+						Amount = 2
+					}
+					{
+					
+						Item = "Obsidian",
+						
+						Amount = 5
+					}	
+				
+				}
+			}	
+		}	
+		
+		
+	//Extension 3
+
+	public class UpgradeTableExt3 : PrefabConfig
+	{
+		public UpgradeTable() : base("UpgradeTable", "ForgeExt4")
+		{
+		}
+		public override void Register()
+		{
+			{
+			StationExtension stationExtension = prefab.GetComponent<StationExtension>();
+			StationExtension.m_craftingStation = "UpgradeTable"
+			}
+			{Piece piece = GetPiece(new PieceConfig()
+				Name = "Blackmetal Anvil"
+				
+				Description = "UpgradeTable Extension 3"
+				
+				Requirements = new PieceRequirementConfig[]
+				{
+					new PieceRequirementConfig()
+					{
+					
+						Item = "RoundLog",
+						
+						Amount = 5
+					}
+					{
+					
+						Item = "Blackmetal",
+						
+						Amount = 20
+					}
+					{
+					
+						Item = "IronNails",
+						
+						Amount = 20
+					}
+					{
+					
+						Item = "LoxPelt",
+						
+						Amount = 2
+					}	
+				
+				}
+			}	
+		}	

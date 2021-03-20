@@ -1,0 +1,43 @@
+public class ReinforcedTrollHelm : PrefabConfig
+{
+    public ReinforcedTrollHelm() : base("ReinforcedTrollHelm", "HelmetTrollLeather")
+    {
+        // Nothing to do here
+        // "Prefab" wil be set for us automatically after this is called
+    }
+
+    public override void Register()
+    {
+        // Configure item drop
+        // ItemDrop is a component on GameObjects which determines info about the item when it's picked up in the inventory
+        ItemDrop item = Prefab.GetComponent<ItemDrop>();
+        item.m_itemData.m_shared.m_name = "Reinforced Troll Hood";
+        item.m_itemData.m_shared.m_description = "Small bronze plates give added protection";
+        item.m_itemData.m_shared.m_maxQuality = 2
+		item.m_itemData.m_shared.m_weight = 2
+		item.m_itemData.m_shared.m_armor = 7
+		item.m_itemData.m_shared.m_armorPerLevel = 2
+    }
+}
+
+public class ReinforcedTrollChest : PrefabConfig
+{
+    public ReinforcedTrollChest() : base("ReinforcedTrollChest", "ArmorTrollLeatherChest")
+    {
+        // Nothing to do here
+        // "Prefab" wil be set for us automatically after this is called
+    }
+
+    public override void Register()
+    {
+        // Configure item drop
+        // ItemDrop is a component on GameObjects which determines info about the item when it's picked up in the inventory
+        ItemDrop item = Prefab.GetComponent<ItemDrop>();
+        item.m_itemData.m_shared.m_name = "Troll Hide Brigandine";
+        item.m_itemData.m_shared.m_description = "Small bronze plates give added protection";
+        item.m_itemData.m_shared.m_maxQuality = 4
+		item.m_itemData.m_shared.m_weight = 2
+		item.m_itemData.m_shared.m_armor = 7
+		item.m_itemData.m_shared.m_armorPerLevel = 2
+    }
+}
