@@ -1,8 +1,8 @@
-//ReinforcedTrollHelm Prefab
+//StitchedTrollHelm Prefab
 
-public class ReinforcedTrollHelm : PrefabConfig
+public class StitchedTrollHelm : PrefabConfig
 {
-    public ReinforcedTrollHelm() : base("ReinforcedTrollHelm", "HelmetTrollLeather")
+    public StitchedTrollHelm() : base("StitchedTrollHelm", "HelmetTrollLeather")
     {
         // Nothing to do here
         // "Prefab" wil be set for us automatically after this is called
@@ -13,33 +13,35 @@ public class ReinforcedTrollHelm : PrefabConfig
         // Configure item drop
         // ItemDrop is a component on GameObjects which determines info about the item when it's picked up in the inventory
         ItemDrop item = Prefab.GetComponent<ItemDrop>();
-        item.m_itemData.m_shared.m_name = "Reinforced Troll Hood";
-        item.m_itemData.m_shared.m_description = "Small bronze plates give added protection";
+        item.m_itemData.m_shared.m_name = "Stitched Troll Hood";
+        item.m_itemData.m_shared.m_description = "Better stitching allows for freedom of movement without compromising protection";
         item.m_itemData.m_shared.m_maxQuality = 3
 		item.m_itemData.m_shared.m_weight = 2
-		item.m_itemData.m_shared.m_armor = 9
+		item.m_itemData.m_shared.m_armor = 12
 		item.m_itemData.m_shared.m_armorPerLevel = 2
     }
 }
 
-//ReinforcedTrollHelm Recipe
+//StitchedTrollHelm Recipe
 
 {
             // Items
-            ObjectManager.Instance.RegisterItem("ReinforcedTrollHelm");
+            ObjectManager.Instance.RegisterItem("StitchedTrollHelm");
 
             // Recipes
             ObjectManager.Instance.RegisterRecipe(new RecipeConfig()
             {
                 // Name of the recipe (defaults to "Recipe_YourItem")
-                Name = "Recipe_ReinforcedTrollHelm",
+                Name = "Recipe_StitchedTrollHelm",
 
                 // Name of the prefab for the crafted item
-                Item = "ReinforcedTrollHelm",
+                Item = "StitchedTrollHelm",
 
                 // Name of the prefab for the crafting station we wish to use
                 // Can set this to null or leave out if you want your recipe to be craftable in your inventory
                 CraftingStation = "UpgradeTable",
+
+				MinStationLevel = 2 				
 
                 // List of requirements to craft your item
                 Requirements = new PieceRequirementConfig[]
@@ -67,22 +69,22 @@ public class ReinforcedTrollHelm : PrefabConfig
                     new PieceRequirementConfig()
                     {
                         // Prefab name of requirement
-                        Item = "Bronze",
+                        Item = "Linen",
 
                         // Amount required
-                        Amount = 5
+                        Amount = 40
 						
-						AmountPerLevel = 3
+						AmountPerLevel = 20
                     }
                 }
 
 
 
-//ReinforcedTrollChest Prefab
+//StitchedTrollChest Prefab
 
-public class ReinforcedTrollChest : PrefabConfig
+public class StitchedTrollChest : PrefabConfig
 {
-    public ReinforcedTrollChest() : base("ReinforcedTrollChest", "ArmorTrollLeatherChest")
+    public StitchedTrollChest() : base("StitchedTrollChest", "ArmorTrollLeatherChest")
     {
         // Nothing to do here
         // "Prefab" wil be set for us automatically after this is called
@@ -94,34 +96,36 @@ public class ReinforcedTrollChest : PrefabConfig
         // ItemDrop is a component on GameObjects which determines info about the item when it's picked up in the inventory
         ItemDrop item = Prefab.GetComponent<ItemDrop>();
         item.m_itemData.m_shared.m_name = "Troll Hide Brigandine";
-        item.m_itemData.m_shared.m_description = "Small bronze plates give added protection";
+        item.m_itemData.m_shared.m_description = "Better Stitching allows for freedom of movement without compromising protection";
         item.m_itemData.m_shared.m_maxQuality = 3
 		item.m_itemData.m_shared.m_weight = 6
-		item.m_itemData.m_shared.m_armor = 9
+		item.m_itemData.m_shared.m_armor = 12
 		item.m_itemData.m_shared.m_armorPerLevel = 2
-		item.m_itemData.m_shared.m_movementModifier = -0.025
+		item.m_itemData.m_shared.m_movementModifier = 0.025
     }
 }
 
 
-//ReinforcedTrollChest Recipe
+//StitchedTrollChest Recipe
 
 {
             // Items
-            ObjectManager.Instance.RegisterItem("ReinforcedTrollChest");
+            ObjectManager.Instance.RegisterItem("StitchedTrollChest");
 
             // Recipes
             ObjectManager.Instance.RegisterRecipe(new RecipeConfig()
             {
                 // Name of the recipe (defaults to "Recipe_YourItem")
-                Name = "Recipe_ReinforcedTrollChest",
+                Name = "Recipe_StitchedTrollChest",
 
                 // Name of the prefab for the crafted item
-                Item = "ReinforcedTrollChest",
+                Item = "StitchedTrollChest",
 
                 // Name of the prefab for the crafting station we wish to use
                 // Can set this to null or leave out if you want your recipe to be craftable in your inventory
-                CraftingStation = "UpgradeTable",
+                CraftingStation = "UpgradeTable", 
+				
+				MinStationLevel = 2 
 
                 // List of requirements to craft your item
                 Requirements = new PieceRequirementConfig[]
@@ -149,21 +153,21 @@ public class ReinforcedTrollChest : PrefabConfig
                     new PieceRequirementConfig()
                     {
                         // Prefab name of requirement
-                        Item = "Bronze",
+                        Item = "Linen",
 
                         // Amount required
-                        Amount = 8
+                        Amount = 40
 						
-						AmountPerLevel = 4
+						AmountPerLevel = 20
                     }
                 }
 				
 
-//ReinforcedTrollLegs Prefab
+//StitchedTrollLegs Prefab
 
-public class ReinforcedTrollLegs : PrefabConfig
+public class StitchedTrollLegs : PrefabConfig
 {
-    public ReinforcedTrollLegs() : base("ReinforcedTrollLegs", "ArmorTrollLeatherLegs")
+    public StitchedTrollLegs() : base("StitchedTrollLegs", "ArmorTrollLeatherLegs")
     {
         // Nothing to do here
         // "Prefab" wil be set for us automatically after this is called
@@ -174,35 +178,37 @@ public class ReinforcedTrollLegs : PrefabConfig
         // Configure item drop
         // ItemDrop is a component on GameObjects which determines info about the item when it's picked up in the inventory
         ItemDrop item = Prefab.GetComponent<ItemDrop>();
-        item.m_itemData.m_shared.m_name = "Reinforced Troll Leggings";
-        item.m_itemData.m_shared.m_description = "Small bronze plates give added protection";
+        item.m_itemData.m_shared.m_name = "Stitched Troll Leggings";
+        item.m_itemData.m_shared.m_description = "Better Stitching allows for freedom of movement without compromising protection";
         item.m_itemData.m_shared.m_maxQuality = 4
 		item.m_itemData.m_shared.m_weight = 6
-		item.m_itemData.m_shared.m_armor = 9
+		item.m_itemData.m_shared.m_armor = 12
 		item.m_itemData.m_shared.m_armorPerLevel = 2
-		item.m_itemData.m_shared.m_movementModifier = -0.025
+		item.m_itemData.m_shared.m_movementModifier = 0.025
     }
 }
 
 
-//ReinforcedTrollLegs Recipe
+//StitchedTrollLegs Recipe
 
 {
             // Items
-            ObjectManager.Instance.RegisterItem("ReinforcedTrollLegs");
+            ObjectManager.Instance.RegisterItem("StitchedTrollLegs");
 
             // Recipes
             ObjectManager.Instance.RegisterRecipe(new RecipeConfig()
             {
                 // Name of the recipe (defaults to "Recipe_YourItem")
-                Name = "Recipe_ReinforcedTrollLegs",
+                Name = "Recipe_StitchedTrollLegs",
 
                 // Name of the prefab for the crafted item
-                Item = "ReinforcedTrollLegs",
+                Item = "StitchedTrollLegs",
 
                 // Name of the prefab for the crafting station we wish to use
                 // Can set this to null or leave out if you want your recipe to be craftable in your inventory
-                CraftingStation = "UpgradeTable",
+                CraftingStation = "UpgradeTable", 
+				
+				MinStationLevel = 2 
 
                 // List of requirements to craft your item
                 Requirements = new PieceRequirementConfig[]
@@ -230,21 +236,21 @@ public class ReinforcedTrollLegs : PrefabConfig
                     new PieceRequirementConfig()
                     {
                         // Prefab name of requirement
-                        Item = "Bronze",
+                        Item = "Linen",
 
                         // Amount required
-                        Amount = 6
+                        Amount = 20
 						
-						AmountPerLevel = 3
+						AmountPerLevel = 10
                     }
                 }
 				
 
-//ReinforcedTrollCape Prefab
+//StitchedTrollCape Prefab
 
-public class ReinforcedTrollCape : PrefabConfig
+public class StitchedTrollCape : PrefabConfig
 {
-    public ReinforcedTrollCape() : base("ReinforcedTrollCape", "CapeTrollHide")
+    public StitchedTrollCape() : base("StitchedTrollCape", "CapeTrollHide")
     {
         // Nothing to do here
         // "Prefab" wil be set for us automatically after this is called
@@ -255,34 +261,36 @@ public class ReinforcedTrollCape : PrefabConfig
         // Configure item drop
         // ItemDrop is a component on GameObjects which determines info about the item when it's picked up in the inventory
         ItemDrop item = Prefab.GetComponent<ItemDrop>();
-        item.m_itemData.m_shared.m_name = "Reinforced Troll Cape";
-        item.m_itemData.m_shared.m_description = "Small bronze plates give added protection";
+        item.m_itemData.m_shared.m_name = "Stitched Troll Cape";
+        item.m_itemData.m_shared.m_description = "Better Stitching allows for freedom of movement without compromising protection";
         item.m_itemData.m_shared.m_maxQuality = 4
 		item.m_itemData.m_shared.m_weight = 2
-		item.m_itemData.m_shared.m_armor = 1
+		item.m_itemData.m_shared.m_armor = 2
 		item.m_itemData.m_shared.m_armorPerLevel = 1
 	}
 }
 
 
-//ReinforcedTrollCape Recipe
+//StitchedTrollCape Recipe
 
 {
             // Items
-            ObjectManager.Instance.RegisterItem("ReinforcedTrollCape");
+            ObjectManager.Instance.RegisterItem("StitchedTrollCape");
 
             // Recipes
             ObjectManager.Instance.RegisterRecipe(new RecipeConfig()
             {
                 // Name of the recipe (defaults to "Recipe_YourItem")
-                Name = "Recipe_ReinforcedTrollCape",
+                Name = "Recipe_StitchedTrollCape",
 
                 // Name of the prefab for the crafted item
-                Item = "ReinforcedTrollCape",
+                Item = "StitchedTrollCape",
 
                 // Name of the prefab for the crafting station we wish to use
                 // Can set this to null or leave out if you want your recipe to be craftable in your inventory
-                CraftingStation = "UpgradeTable",
+                CraftingStation = "UpgradeTable", 
+				
+				MinStationLevel = 2 
 
                 // List of requirements to craft your item
                 Requirements = new PieceRequirementConfig[]
@@ -310,11 +318,11 @@ public class ReinforcedTrollCape : PrefabConfig
                     new PieceRequirementConfig()
                     {
                         // Prefab name of requirement
-                        Item = "Bronze",
+                        Item = "Linen",
 
                         // Amount required
-                        Amount = 2
+                        Amount = 15
 						
-						AmountPerLevel = 1
+						AmountPerLevel = 5
                     }
                 }
